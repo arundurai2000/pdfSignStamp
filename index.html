@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DigiPdf SignStamp</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+    <div id="first">
+        <div id="header"> Upload your document 
+            <button type="button" id="close" aria-label="Close"> 
+                <span aria-hidden="true">&times;</span> 
+            </button>
+        </div>
+        <div id="uploader-box">
+                Drag and drop your file here <br> or <br> <br>
+                <input type="file" id="myPdf" accept=".pdf">
+                <label for="myPdf" id="upload" onclick="file()">Upload</label> <br>
+            </div>
+            <div class="footer">The file should be only in pdf format and the size should not exceed 12MB</div>    
+        </div> 
+    </div>
+
+    <div id="second">
+        <div id="header_2">
+            Sign your document
+            <button type="button" id="close" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div id="canvas_div">
+            <canvas id="canvas" ></canvas>
+            <div id="drag_sign">
+                <img type="button" id="delete" src="Img\delete.png"></img>
+                <img type="button" id="add" src="Img\add.jpg"></img>
+                <img id="img_v" width="300" height="300" ></img>
+            </div>
+        </div>
+        <button id="add_sign">Add Signature</button>
+    </div>
+
+    <div id="download_div">
+        <img id="img_v1" width="300" height="300" ></img>
+        <button id="download" download="mypdf.pdf">Download</button>
+    </div>
+   
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Add Signature</p><br>
+          <div>
+            <canvas id="signature"></canvas><br>
+            <button id="clear-signature">Clear</button>
+            <button id="add-signature">ADD</button>
+          </div>
+        </div>  
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.5.207/pdf.js"> </script>
+    <script language="JavaScript"  src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
